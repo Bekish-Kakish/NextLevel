@@ -1,0 +1,474 @@
+.pageHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  padding: 1.1rem 1.2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.26);
+  background:
+    linear-gradient(160deg, rgba(17, 24, 39, 0.92), rgba(8, 47, 73, 0.7)),
+    radial-gradient(circle at 85% 12%, rgba(34, 211, 238, 0.2), transparent 48%);
+  box-shadow:
+    0 16px 46px rgba(2, 6, 23, 0.46),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.pageEyebrow {
+  margin: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(148, 163, 184, 0.95);
+}
+
+.pageTitle {
+  margin: 0.28rem 0 0;
+  font-size: clamp(1.4rem, 2.3vw, 2.05rem);
+  line-height: 1.1;
+  font-weight: 900;
+  color: #f8fafc;
+}
+
+.pageMeta {
+  margin: 0.56rem 0 0;
+  font-size: 0.86rem;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.pageStats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.32rem;
+  min-width: 240px;
+  padding: 0.7rem 0.84rem;
+  border-radius: 0.86rem;
+  border: 1px solid rgba(148, 163, 184, 0.26);
+  background: rgba(2, 6, 23, 0.46);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.pageStats p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: rgba(226, 232, 240, 0.94);
+}
+
+.pageLinks {
+  display: flex;
+  gap: 0.55rem;
+  margin-top: 0.38rem;
+}
+
+.battleShell {
+  display: grid;
+  gap: 0.88rem;
+  padding: 1.05rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.82)),
+    radial-gradient(circle at 14% 0%, rgba(34, 211, 238, 0.14), transparent 38%);
+  box-shadow:
+    0 18px 44px rgba(2, 6, 23, 0.52),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.battleHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  padding: 0.78rem 0.88rem;
+  border-radius: 0.84rem;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  background: rgba(15, 23, 42, 0.56);
+}
+
+.missionEyebrow {
+  margin: 0;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(148, 163, 184, 0.94);
+}
+
+.missionTitle {
+  margin: 0.24rem 0 0;
+  font-size: clamp(1.15rem, 1.95vw, 1.5rem);
+  font-weight: 850;
+  color: #f8fafc;
+}
+
+.missionMeta {
+  margin: 0.4rem 0 0;
+  font-size: 0.76rem;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.turnBadge {
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.58);
+  background: rgba(14, 116, 144, 0.28);
+  color: #c5f6ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.18);
+}
+
+.stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 136px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 0.75rem;
+  padding: 0.82rem;
+  border-radius: 0.92rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.12), transparent 55%),
+    rgba(2, 6, 23, 0.54);
+}
+
+.unitCard {
+  position: relative;
+  display: grid;
+  gap: 0.44rem;
+  padding: 0.7rem;
+  border-radius: 0.8rem;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: linear-gradient(165deg, rgba(30, 41, 59, 0.76), rgba(15, 23, 42, 0.92));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.unitName {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0;
+  font-size: 0.88rem;
+  color: rgba(248, 250, 252, 0.98);
+  font-weight: 780;
+}
+
+.unitName span {
+  font-size: 0.72rem;
+  color: rgba(148, 163, 184, 0.95);
+}
+
+.hpTrack {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: rgba(15, 23, 42, 0.92);
+}
+
+.hpFill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #f97316 0%, #f43f5e 44%, #ef4444 100%);
+  transition: width 0.35s ease;
+  box-shadow: 0 0 14px rgba(248, 113, 113, 0.42);
+}
+
+.hpLabel {
+  margin: 0;
+  font-size: 0.72rem;
+  color: rgba(226, 232, 240, 0.92);
+}
+
+.spriteBox {
+  position: relative;
+  min-height: 128px;
+  display: grid;
+  place-items: center;
+  border-radius: 0.72rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background:
+    radial-gradient(circle at 50% 20%, rgba(56, 189, 248, 0.2), transparent 60%),
+    rgba(2, 6, 23, 0.48);
+}
+
+.unitSide {
+  margin: 0;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(148, 163, 184, 0.95);
+}
+
+.centerLane {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 0.34rem;
+  border-radius: 0.74rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: linear-gradient(180deg, rgba(8, 47, 73, 0.45), rgba(15, 23, 42, 0.7));
+}
+
+.centerLabel {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 850;
+  color: rgba(186, 230, 253, 0.98);
+  text-shadow: 0 0 16px rgba(56, 189, 248, 0.42);
+}
+
+.centerSub {
+  margin: 0;
+  font-size: 0.74rem;
+  color: rgba(226, 232, 240, 0.9);
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.actionsWrap {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.actionButton {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.72rem 0.66rem;
+  border-radius: 0.72rem;
+  border: 1px solid rgba(56, 189, 248, 0.34);
+  background: linear-gradient(140deg, rgba(14, 116, 144, 0.25), rgba(15, 23, 42, 0.88));
+  color: #ecfeff;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.14s ease,
+    border-color 0.14s ease,
+    box-shadow 0.14s ease;
+}
+
+.actionButton span {
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.actionButton small {
+  font-size: 0.67rem;
+  color: rgba(186, 230, 253, 0.9);
+}
+
+.actionButton:hover {
+  transform: translateY(-1px);
+  border-color: rgba(103, 232, 249, 0.7);
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.18);
+}
+
+.actionButton:active {
+  transform: translateY(0);
+}
+
+.actionButtonDisabled,
+.actionButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  border-color: rgba(148, 163, 184, 0.26);
+  background: rgba(15, 23, 42, 0.62);
+  box-shadow: none;
+}
+
+.logWrap {
+  display: grid;
+  gap: 0.44rem;
+  padding: 0.72rem;
+  border-radius: 0.8rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(2, 6, 23, 0.56);
+}
+
+.logTitle {
+  margin: 0;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(148, 163, 184, 0.95);
+}
+
+.logList {
+  display: grid;
+  gap: 0.34rem;
+  max-height: 198px;
+  overflow: auto;
+  padding-right: 0.24rem;
+}
+
+.logList p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(226, 232, 240, 0.94);
+}
+
+.resultCard {
+  display: grid;
+  gap: 0.48rem;
+  padding: 0.82rem;
+  border-radius: 0.84rem;
+  border: 1px solid rgba(250, 204, 21, 0.42);
+  background:
+    linear-gradient(150deg, rgba(120, 53, 15, 0.2), rgba(15, 23, 42, 0.82)),
+    rgba(2, 6, 23, 0.55);
+  box-shadow: 0 0 18px rgba(250, 204, 21, 0.14);
+}
+
+.resultCard h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #fef3c7;
+}
+
+.resultCard p {
+  margin: 0;
+  font-size: 0.84rem;
+  color: rgba(226, 232, 240, 0.94);
+}
+
+.resultActions {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+  border-radius: 0.62rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 760;
+  border: 1px solid transparent;
+  transition:
+    transform 0.12s ease,
+    filter 0.12s ease,
+    border-color 0.12s ease;
+}
+
+.primaryButton {
+  color: #ecfeff;
+  border-color: rgba(56, 189, 248, 0.54);
+  background: linear-gradient(130deg, rgba(14, 116, 144, 0.85), rgba(3, 105, 161, 0.72));
+}
+
+.secondaryButton {
+  color: rgba(226, 232, 240, 0.94);
+  border-color: rgba(148, 163, 184, 0.35);
+  background: rgba(15, 23, 42, 0.68);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+.primaryButton:active,
+.secondaryButton:active {
+  transform: translateY(0);
+}
+
+.statusCard,
+.blockedCard {
+  padding: 0.96rem 1rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: linear-gradient(170deg, rgba(30, 41, 59, 0.74), rgba(2, 6, 23, 0.86));
+  color: rgba(226, 232, 240, 0.95);
+}
+
+.statusCard p,
+.blockedCard p {
+  margin: 0;
+  font-size: 0.86rem;
+}
+
+.floatingHit {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, 0);
+  font-size: 1.05rem;
+  font-weight: 900;
+  text-shadow: 0 2px 8px rgba(2, 6, 23, 0.85);
+  animation: float-up 900ms ease forwards;
+  pointer-events: none;
+}
+
+.floatingDamage {
+  color: #fb7185;
+}
+
+.floatingHeal {
+  color: #22c55e;
+}
+
+.floatingCritical {
+  color: #facc15;
+}
+
+@keyframes float-up {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 10px) scale(0.88);
+  }
+
+  16% {
+    opacity: 1;
+    transform: translate(-50%, -4px) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -32px) scale(1.06);
+  }
+}
+
+@media (max-width: 1000px) {
+  .pageHeader {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pageStats {
+    min-width: 0;
+  }
+
+  .stage {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .centerLane {
+    min-height: 72px;
+  }
+
+  .actionsWrap {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .battleShell {
+    padding: 0.8rem;
+  }
+
+  .battleHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .turnBadge {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .actionsWrap {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
