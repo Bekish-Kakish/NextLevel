@@ -1,10 +1,14 @@
 import type { NextConfig } from "next";
 
+const isGithubPages = process.env.GITHUB_ACTIONS === "true";
+
 const nextConfig: NextConfig = {
-  output: 'export', // Обязательно для работы на GitHub Pages (статический экспорт)
-  basePath: '/NextLevel', // Имя твоего репозитория, чтобы пути к картинкам не ломались
+  output: "export",
+  basePath: isGithubPages ? "/NextLevel" : "",
+  assetPrefix: isGithubPages ? "/NextLevel/" : undefined,
+  trailingSlash: true,
   images: {
-    unoptimized: true, // GitHub не умеет оптимизировать картинки на лету
+    unoptimized: true,
   },
 };
 
